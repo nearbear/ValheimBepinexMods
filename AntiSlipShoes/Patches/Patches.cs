@@ -21,7 +21,7 @@ namespace AntiSlipShoes.Patches
                 if (currentCode.opcode == OpCodes.Ldc_R4 && (float)currentCode.operand < 90f)
                 {
                     codepoint = i;
-                    codes[i].operand = 50f;
+                    codes[i].operand = Main.slidingThreshold.Value;
                     break;
                 }
             }

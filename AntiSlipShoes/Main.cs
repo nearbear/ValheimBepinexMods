@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using System.IO;
@@ -24,12 +25,23 @@ namespace AntiSlipShoes
 
         #endregion
 
+        #region[Configurations]
+
+        public static ConfigEntry<float> slidingThreshold;
+
+        #endregion
+
         public Main()
         {
             log = Logger;
             harmony = new Harmony(GUID);
             assembly = Assembly.GetExecutingAssembly();
             modFolder = Path.GetDirectoryName(assembly.Location);
+        }
+
+        private void Awake()
+        {
+            slidingThreshold = Config.Bind("General", "SlidingThreshold", 50f, "The angle in degrees at which you start to slide. (float)");
         }
 
         public void Start()
