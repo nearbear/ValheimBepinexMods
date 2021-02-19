@@ -3,6 +3,10 @@
 
 This is a Bepinex mod for Valheim that increases the slope angle you can walk up without sliding.
 
+## Contributors
+
+Lucidinceptor for giving the icon mad drip
+
 ## Installation (manual)
 
 If you are installing this manually, do the following
