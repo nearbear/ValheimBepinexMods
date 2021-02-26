@@ -128,7 +128,7 @@ namespace CustomSlotItemLib
         [HarmonyPostfix]
         static void GetSetCountPostfix(ref int __result, ref Humanoid __instance, string setName)
         {
-            foreach (string slotName in customSlotItemData[__instance].Keys)
+            foreach (string slotName in customSlotItemData[__instance].Keys.ToList())
             {
                 if (IsSlotOccupied(__instance, slotName) && GetSlotItem(__instance, slotName).m_shared.m_setName == setName)
                 {
