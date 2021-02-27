@@ -1,0 +1,9 @@
+{
+  "name": "VengefulTrees",
+  "description": "Every now and then a tree you chop will not forgive you for what you did to it and try to murder you. Survive and you'll hone your woodcutting skills while earning a bountiful harvest.",
+  "version_number": "1.0.1",
+  "website_url": "https://github.com/nearbear/ValheimBepinexMods/tree/main/VengefulTrees",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.600"
+  ]
+}

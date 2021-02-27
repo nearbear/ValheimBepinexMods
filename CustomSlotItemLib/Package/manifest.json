@@ -1,7 +1,7 @@
 {
   "name": "CustomSlotItemLib",
   "description": "This is a Bepinex mod for Valheim that makes custom slotted items easier to develop.",
-  "version_number": "1.0.1",
+  "version_number": "1.0.2",
   "website_url": "https://github.com/nearbear/ValheimBepinexMods/CustomSlotItemLib",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.600"
