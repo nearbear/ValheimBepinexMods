@@ -1,0 +1,9 @@
+{
+  "name": "BiggerBoatMapExploreRadius",
+  "description": "This is a Bepinex mod for Valheim that increases the exploration radius while in a boat.",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/nearbear/ValheimBepinexMods/tree/main/BiggerBoatMapExploreRadius",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.600"
+  ]
+}
