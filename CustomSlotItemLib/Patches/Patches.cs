@@ -115,7 +115,7 @@ namespace CustomSlotItemLib
         [HarmonyPostfix]
         static void UnequipAllItemsPostfix(ref Humanoid __instance)
         {
-            foreach (string slotName in customSlotItemData[__instance].Keys)
+            foreach (string slotName in customSlotItemData[__instance].Keys.ToList())
             {
                 if (IsSlotOccupied(__instance, slotName))
                 {
