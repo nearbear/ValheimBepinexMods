@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VengefulTrees", "VengefulTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggerBoatMapExploreRadius", "BiggerBoatMapExploreRadius\BiggerBoatMapExploreRadius.csproj", "{A66C9C5E-6127-4335-A739-4CE12D7FE577}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterAutoRun", "BetterAutoRun\BetterAutoRun.csproj", "{AE1D2679-CD9B-4E56-84B8-61F178DBE051}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A66C9C5E-6127-4335-A739-4CE12D7FE577}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{A66C9C5E-6127-4335-A739-4CE12D7FE577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A66C9C5E-6127-4335-A739-4CE12D7FE577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1D2679-CD9B-4E56-84B8-61F178DBE051}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1D2679-CD9B-4E56-84B8-61F178DBE051}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{AE1D2679-CD9B-4E56-84B8-61F178DBE051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1D2679-CD9B-4E56-84B8-61F178DBE051}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
