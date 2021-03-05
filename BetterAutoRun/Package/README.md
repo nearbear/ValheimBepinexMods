@@ -1,7 +1,11 @@
 
 # BetterAutoRun for Valheim
 
-This is a Bepinex mod for Valheim that enables strafing and button-free mouse control for autorun
+This is a Bepinex mod for Valheim that enables strafing, auto sprint, and button-free mouse control for autorun
+
+## Configuration
+
+- sprintUntil: Auto sprint until you have this much stamina remaining (percentage, 0 to 1). Set to 1 to disable.
 
 ## Installation (manual)
 
