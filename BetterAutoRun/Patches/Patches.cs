@@ -21,7 +21,7 @@ namespace BetterAutoRun
             CodeInstruction branchEndAutoRun = null;
 
             List<CodeInstruction> codes = new List<CodeInstruction>(instructions);
-            DumpIL(codes);
+            //DumpIL(codes);
             for (int i = 0; i < codes.Count(); i++)
             {
                 CodeInstruction code = codes[i];
@@ -110,13 +110,51 @@ namespace BetterAutoRun
                 }
             }
             
-            DumpIL(codes);
+            //DumpIL(codes);
 
             //Debug.Log(string.Format("{0} {1} {2} {3} {4}", foundAutoRunCondition, branchEndAutoRun != null, foundCancelAutorunCondition, foundMoveDirCondition, foundMoveDirAssignment));
             if (!foundAutoRunCondition || branchEndAutoRun == null || !foundCancelAutorunCondition || !foundMoveDirCondition || !foundMoveDirAssignment)
                 throw new Exception("BetterAutoRun injection point NOT found!! Game has most likely updated and broken this mod!");
             
             return codes.AsEnumerable();
+        }
+
+        // This prefix handles auto sprinting
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(Player), nameof(Player.SetControls))]
+        public static void SetControlsPrefix(ref Player __instance, ref bool run, ref bool autoRun)
+        {
+            Player player = __instance;
+
+            // Ignore this function if not autorunning or the config is set to 1, which disables the function
+            if (!player.m_autoRun || Mathf.Approximately(Main.sprintUntil.Value, 1f))
+            {
+                return;
+            }
+            // Toggle sprinting on if we just started autorunning
+            if (autoRun)
+            {
+                player.m_run = true;
+            }
+            // Check if we're above our sprinting stamina threshold
+            if (player.m_stamina > Main.sprintUntil.Value * player.m_maxStamina)
+            {
+                // Toggle sprinting on if we hit full stamina
+                if (!player.m_run && Mathf.Approximately(player.m_stamina, player.m_maxStamina))
+                {
+                    player.m_run = true;
+                }
+                // Retain the sprinting state even if the key isn't being held
+                if (player.m_run)
+                {
+                    run = true;
+                }
+            }
+            // Otherwise, toggle running off to regenerate stamina until full again
+            else
+            {
+                player.m_run = false;
+            }
         }
 
         public static void DumpIL<T>(this IEnumerable<T> enumerable)

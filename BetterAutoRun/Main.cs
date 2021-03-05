@@ -27,7 +27,7 @@ namespace BetterAutoRun
 
         #region[Configurations]
 
-        public static ConfigEntry<float> slidingThreshold;
+        public static ConfigEntry<float> sprintUntil;
 
         #endregion
 
@@ -41,7 +41,7 @@ namespace BetterAutoRun
 
         private void Awake()
         {
-            slidingThreshold = Config.Bind("General", "SlidingThreshold", 50f, "The angle in degrees at which you start to slide. (float)");
+            sprintUntil = Config.Bind("General", "sprintUntil", .5f, "The 0 to 1 percentage of your stamina that you will stop auto sprinting at. Set to 1 to disable. (float)");
         }
 
         public void Start()
