@@ -73,7 +73,7 @@ namespace CustomSlotItemLib
         [HarmonyPostfix]
         static void UnequipItemPostfix(ref Humanoid __instance, ItemDrop.ItemData item, bool triggerEquipEffects = true)
         {
-            if (item == null || !IsCustomSlotItem(item))
+            if (!IsCustomSlotItem(item))
             {
                 return;
             }
@@ -89,7 +89,7 @@ namespace CustomSlotItemLib
         [HarmonyPostfix]
         static void IsItemEquipedPostfix(ref bool __result, ref Humanoid __instance, ItemDrop.ItemData item)
         {
-            if (item == null || !IsCustomSlotItem(item))
+            if (!IsCustomSlotItem(item))
             {
                 return;
             }

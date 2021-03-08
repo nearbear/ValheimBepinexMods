@@ -1,9 +1,9 @@
 {
   "name": "AntiSlipShoes",
   "description": "This is a Bepinex mod for Valheim that increases the slope angle you can walk up without sliding.",
-  "version_number": "1.0.3",
+  "version_number": "1.0.4",
   "website_url": "https://github.com/nearbear/ValheimBepinexMods/tree/main/AntiSlipShoes",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.600"
+    "denikson-BepInExPack_Valheim-5.4.800"
   ]
 }

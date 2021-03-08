@@ -1,9 +1,9 @@
 {
   "name": "BetterAutoRun",
   "description": "Enables strafing, auto sprint, and button-free mouse control for autorun",
-  "version_number": "1.0.2",
+  "version_number": "1.0.3",
   "website_url": "https://github.com/nearbear/ValheimBepinexMods/tree/main/BetterAutoRun",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.602"
+    "denikson-BepInExPack_Valheim-5.4.800"
   ]
 }

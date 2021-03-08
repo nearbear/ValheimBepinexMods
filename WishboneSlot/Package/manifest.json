@@ -1,10 +1,10 @@
 {
   "name": "WishboneSlot",
   "description": "This is a Bepinex mod for Valheim that lets you equip both the Wishbone and Megingjord at the same time.",
-  "version_number": "1.0.2",
+  "version_number": "1.0.3",
   "website_url": "https://github.com/nearbear/ValheimBepinexMods/WishboneSlot",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.600",
+    "denikson-BepInExPack_Valheim-5.4.800",
     "nearbear-CustomSlotItemLib-1.0.3"
   ]
 }

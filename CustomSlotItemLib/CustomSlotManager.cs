@@ -12,7 +12,7 @@ namespace CustomSlotItemLib
 
         public static bool IsCustomSlotItem(ItemDrop.ItemData item)
         {
-            return item.m_dropPrefab.GetComponent<CustomSlotItem>();
+            return item != null && item.m_dropPrefab && item.m_dropPrefab.GetComponent<CustomSlotItem>();
         }
 
         public static ItemDrop.ItemData GetPrefabItemData(Humanoid humanoid, string slotName)
