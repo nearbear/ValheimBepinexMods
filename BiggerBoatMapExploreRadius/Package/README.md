@@ -19,6 +19,12 @@ If you are installing this manually, do the following
 
 # Changelog
 
+## [1.0.3] - 2021-03-11
+
+### Changed
+
+- Fixed logging test message spam
+
 ## [1.0.2] - 2021-03-11
 
 ### Changed
